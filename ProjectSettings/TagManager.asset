@@ -47,3 +47,6 @@ TagManager:
   - name: Foreground Decorations
     uniqueID: 2966981699
     locked: 0
+  - name: New Background
+    uniqueID: 2262705911
+    locked: 0
