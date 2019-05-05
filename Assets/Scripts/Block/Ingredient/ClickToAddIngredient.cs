@@ -12,8 +12,14 @@ public class ClickToAddIngredient : MonoBehaviour
 
     void Update()
     {
+        // Handle player click events
+        if (Input.GetMouseButtonDown(0))
+        {
+            CheckClicked();
+        }
+
         // Debug indicator showing if you can click to add an ingredient to the plate
-        if(debugIndicator != null)
+        if (debugIndicator != null)
         {
             if(targets.Count == 0)
             {
@@ -23,6 +29,28 @@ public class ClickToAddIngredient : MonoBehaviour
                 debugIndicator.color = Color.green;
             }
         }
+    }
+
+    void CheckClicked()
+    {
+        // Cast a ray to see where the user clicked
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(ray.origin, ray.direction, Mathf.Infinity);
+
+        // If hit, the player has clicked this block's collider
+        foreach(RaycastHit2D hit in hits)
+        {
+            if (hit.collider.gameObject == gameObject)
+            {
+                Debug.Log("Clicked!");
+
+                // Add ingredient to all current targets
+                foreach (PlateIngredients plate in targets)
+                {
+                    plate.AddIngredient(ingredient);
+                }
+            }
+        } 
     }
 
     void OnTriggerEnter2D(Collider2D collision)

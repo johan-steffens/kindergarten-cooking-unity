@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class PlateIngredients : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public List<Ingredient> ingredients;
+
+    public void AddIngredient(Ingredient ingredient)
     {
-        
+        if(ingredients == null)
+        {
+            ingredients = new List<Ingredient>();
+        }
+        ingredients.Add(ingredient);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
