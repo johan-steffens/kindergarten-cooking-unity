@@ -72,16 +72,4 @@ public class RecipeCard : MonoBehaviour
         failedText.SetActive(true);
     }
 
-    public float GetElementHeight()
-    {
-        RectTransform transform = GetComponent<RectTransform>();
-        return transform.sizeDelta.y;
-    }
-
-    public float GetElementWidth()
-    {
-        RectTransform transform = GetComponent<RectTransform>();
-        return transform.sizeDelta.y;
-    }
-
 }

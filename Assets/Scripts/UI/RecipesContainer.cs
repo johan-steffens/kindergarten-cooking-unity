@@ -16,12 +16,17 @@ public class RecipesContainer : MonoBehaviour
         instance = this;
     }
 
-    private RecipeCard[] GetRecipeCards()
+    public static RecipesContainer GetInstance()
+    {
+        return instance;
+    }
+
+    public RecipeCard[] GetRecipeCards()
     {
         return GetComponentsInChildren<RecipeCard>();
     }
 
-    public void AddCard()
+    public GameObject AddCard()
     {
         int recipeCount = GetRecipeCards().Length;
 
@@ -29,6 +34,8 @@ public class RecipesContainer : MonoBehaviour
         newCard.transform.SetParent(gameObject.transform, false);
 
         ReorderCards();
+
+        return newCard;
     }
 
     public void ReorderCards()
