@@ -25,20 +25,23 @@ public class ClickToRotate : MonoBehaviour
     {
         // Cast a ray to see where the user clicked
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(ray.origin, ray.direction, Mathf.Infinity);
 
         // If hit, the player has clicked this block's collider
-        if (hit.collider.gameObject == gameObject)
+        foreach (RaycastHit2D hit in hits)
         {
-            int index = availableDirections.IndexOf(direction) + 1;
-            if(index == availableDirections.Count)
+            if (hit.collider.gameObject == gameObject)
             {
-                index = 0;
-            }
+                int index = availableDirections.IndexOf(direction) + 1;
+                if (index == availableDirections.Count)
+                {
+                    index = 0;
+                }
 
-            // Change direction and rotation
-            Direction newDirection = availableDirections[index];
-            SetRotation(newDirection);
+                // Change direction and rotation
+                Direction newDirection = availableDirections[index];
+                SetRotation(newDirection);
+            }
         }
     }
 
