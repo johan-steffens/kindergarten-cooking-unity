@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class RecipeCard : MonoBehaviour
 {
+
+    private int orderNumber = 0;
+    private Recipe recipe;
+
     public Sprite basePanelSprite;
     public Sprite hoverPanelSprite;
     public Sprite failedPanelSprite;
@@ -72,4 +76,14 @@ public class RecipeCard : MonoBehaviour
         failedText.SetActive(true);
     }
 
+    public void SetRecipe(Recipe recipe)
+    {
+        this.recipe = recipe;
+    }
+
+    public void SetOrderNumber(int orderNumber)
+    {
+        this.orderNumber = orderNumber;
+        txtOrderNumber.text = "Order #" + orderNumber;
+    }
 }

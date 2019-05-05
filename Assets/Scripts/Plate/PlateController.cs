@@ -7,6 +7,7 @@ public class PlateController : MonoBehaviour
 
     public List<Ingredient> addedIngredients;
 
+    public Recipe recipe;
     private RecipeCard card;
 
     private PlateMovement movement;
@@ -43,4 +44,8 @@ public class PlateController : MonoBehaviour
         Destroy(gameObject);
     }
      
+    public void SetRecipe(Recipe recipe)
+    {
+        this.recipe = recipe;
+    }
 }

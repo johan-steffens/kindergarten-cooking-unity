@@ -7723,6 +7723,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platePrefab: {fileID: 1850946262773456729, guid: a4f9d638d9ee75543b83a04fa28328ff,
     type: 3}
+  recipes:
+  - name: Mud Pie
+    ingredients: 000000000100000000000000
+  - name: Flowerbed Burger
+    ingredients: 010000000000000001000000
+  - name: Flowerbed Burger
+    ingredients: 010000000000000001000000
+  - name: Flowerbed Burger
+    ingredients: 010000000000000001000000
 --- !u!1 &2088155470
 GameObject:
   m_ObjectHideFlags: 0
