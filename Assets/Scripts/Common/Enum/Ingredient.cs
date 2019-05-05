@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Ingredient
+public enum Ingredient : int
 {
-    MUD, STICKS
+
+    MUD = 35,
+    STICKS = 20
+
 }

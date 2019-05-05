@@ -5661,7 +5661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b3c6ea3f3cccc047a7a667ca23bb174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient: 1
+  ingredient: 0
   debugIndicator: {fileID: 1712164460}
 --- !u!1 &519420028
 GameObject:
@@ -7725,13 +7725,11 @@ MonoBehaviour:
     type: 3}
   recipes:
   - name: Mud Pie
-    ingredients: 000000000100000000000000
+    ingredients: 230000001400000023000000
   - name: Flowerbed Burger
-    ingredients: 010000000000000001000000
-  - name: Flowerbed Burger
-    ingredients: 010000000000000001000000
-  - name: Flowerbed Burger
-    ingredients: 010000000000000001000000
+    ingredients: 140000002300000014000000
+  - name: Garden Salad
+    ingredients: 1400000023000000
 --- !u!1 &2088155470
 GameObject:
   m_ObjectHideFlags: 0

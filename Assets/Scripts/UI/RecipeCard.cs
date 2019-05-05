@@ -6,9 +6,6 @@ using UnityEngine.UI;
 public class RecipeCard : MonoBehaviour
 {
 
-    private int orderNumber = 0;
-    private Recipe recipe;
-
     public Sprite basePanelSprite;
     public Sprite hoverPanelSprite;
     public Sprite failedPanelSprite;
@@ -26,6 +23,11 @@ public class RecipeCard : MonoBehaviour
     private GameObject ingredientThree;
     private GameObject ingredientFour;
     private GameObject ingredientFive;
+
+    private int orderNumber = 0;
+    private Recipe recipe;
+    private int price = 0;
+    private int profit = 0;
 
     void Start()
     {
@@ -79,6 +81,15 @@ public class RecipeCard : MonoBehaviour
     public void SetRecipe(Recipe recipe)
     {
         this.recipe = recipe;
+
+        // Process recipe information
+        price = 0;
+        foreach (Ingredient ingredient in recipe.ingredients)
+        {
+            price += (int) ingredient;
+        }
+        profit = price + Mathf.RoundToInt(price * 0.1f);
+        txtProfit.text = "$" + profit;
     }
 
     public void SetOrderNumber(int orderNumber)

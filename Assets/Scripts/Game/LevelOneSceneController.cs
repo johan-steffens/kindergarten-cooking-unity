@@ -31,7 +31,7 @@ public class LevelOneSceneController : MonoBehaviour
         GameObject plate = Instantiate(platePrefab);
 
         // Wait for objects to instantiate
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForEndOfFrame();
         
         // Configure plate
         plate.GetComponent<PlateController>().SetCard(card.GetComponent<RecipeCard>());
