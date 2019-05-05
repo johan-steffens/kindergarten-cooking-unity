@@ -17,6 +17,7 @@ public class LevelOneSceneController : MonoBehaviour
     {
         GameObject card = RecipesContainer.GetInstance().AddCard();
         GameObject plate = Instantiate(platePrefab);
+        plate.GetComponent<PlateController>().SetCard(card.GetComponent<RecipeCard>());
     }
 
 }

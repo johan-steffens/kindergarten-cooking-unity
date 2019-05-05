@@ -8,7 +8,7 @@ public class ClickToAddIngredient : MonoBehaviour
     public Ingredient ingredient;
     public SpriteRenderer debugIndicator;
 
-    private List<PlateIngredients> targets = new List<PlateIngredients>();
+    private List<PlateController> targets = new List<PlateController>();
 
     void Update()
     {
@@ -45,7 +45,7 @@ public class ClickToAddIngredient : MonoBehaviour
                 Debug.Log("Clicked!");
 
                 // Add ingredient to all current targets
-                foreach (PlateIngredients plate in targets)
+                foreach (PlateController plate in targets)
                 {
                     plate.AddIngredient(ingredient);
                 }
@@ -55,7 +55,7 @@ public class ClickToAddIngredient : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        PlateIngredients plate = collision.gameObject.GetComponent<PlateIngredients>();
+        PlateController plate = collision.gameObject.GetComponent<PlateController>();
         if (plate != null)
         {
             targets.Add(plate);
@@ -64,7 +64,7 @@ public class ClickToAddIngredient : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        PlateIngredients plate = collision.gameObject.GetComponent<PlateIngredients>();
+        PlateController plate = collision.gameObject.GetComponent<PlateController>();
         if (plate != null)
         {
             targets.Remove(plate);
