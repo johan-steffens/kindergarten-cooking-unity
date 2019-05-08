@@ -5,7 +5,22 @@ using UnityEngine;
 public class LevelOneSceneController : MonoBehaviour
 {
     public GameObject platePrefab;
-    public List<Recipe> recipes;
+
+    private List<Recipe> recipes = new List<Recipe>
+    {
+        new Recipe("Mud Pie", new List<Ingredient>{
+            Ingredient.MUD, Ingredient.STICKS, Ingredient.MUD
+        }),
+        new Recipe("Flowerbed Burger", new List<Ingredient>{
+            Ingredient.STICKS, Ingredient.MUD, Ingredient.STICKS
+        }),
+        new Recipe("Garden Salad", new List<Ingredient>{
+            Ingredient.MUD, Ingredient.STICKS
+        }),
+        new Recipe("Garden Salad", new List<Ingredient>{
+            Ingredient.STICKS, Ingredient.MUD
+        }),
+    };
 
     private int currentOrderNumber = 1;
 

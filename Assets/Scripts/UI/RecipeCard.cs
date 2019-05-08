@@ -86,15 +86,84 @@ public class RecipeCard : MonoBehaviour
         price = 0;
         foreach (Ingredient ingredient in recipe.ingredients)
         {
-            price += (int) ingredient;
+            price += ingredient.value;
         }
         profit = price + Mathf.RoundToInt(price * 0.1f);
         txtProfit.text = "$" + profit;
+
+        // Update ingredients
+        UpdateIngredients();
     }
 
     public void SetOrderNumber(int orderNumber)
     {
         this.orderNumber = orderNumber;
         txtOrderNumber.text = "Order #" + orderNumber;
+    }
+
+    private void UpdateIngredients()
+    {
+        int ingredientCount = recipe.ingredients.Count;
+        for (int i = 0; i < ingredientCount; i++)
+        {
+            if (i == 4)
+                return;
+
+            Ingredient ingredient = recipe.ingredients[i];
+            if(i == 0)
+            {
+                Image image = ingredientOne.transform.Find("Image").GetComponent<Image>();
+                image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
+                image.color = ingredient.color;
+            }
+            else if(i == 1)
+            {
+                Image image = ingredientTwo.transform.Find("Image").GetComponent<Image>();
+                image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
+                image.color = ingredient.color;
+            }
+            else if (i == 2)
+            {
+                Image image = ingredientThree.transform.Find("Image").GetComponent<Image>();
+                image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
+                image.color = ingredient.color;
+            }
+            else if (i == 3)
+            {
+                Image image = ingredientFour.transform.Find("Image").GetComponent<Image>();
+                image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
+                image.color = ingredient.color;
+            }
+            else if (i == 4)
+            {
+                Image image = ingredientFive.transform.Find("Image").GetComponent<Image>();
+                image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
+                image.color = ingredient.color;
+            }
+        }
+
+        for(int i = 4; i >= ingredientCount; i--)
+        {
+            if (i == 0)
+            {
+                ingredientOne.SetActive(false);
+            }
+            else if (i == 1)
+            {
+                ingredientTwo.SetActive(false);
+            }
+            else if (i == 2)
+            {
+                ingredientThree.SetActive(false);
+            }
+            else if (i == 3)
+            {
+                ingredientFour.SetActive(false);
+            }
+            else if (i == 4)
+            {
+                ingredientFive.SetActive(false);
+            }
+        }
     }
 }
