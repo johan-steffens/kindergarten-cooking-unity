@@ -54,6 +54,7 @@ public class LevelOneSceneController : MonoBehaviour
 
         // Configure recipe card
         card.GetComponent<RecipeCard>().SetOrderNumber(currentOrderNumber);
+        card.GetComponent<RecipeCard>().SetPlate(plate.GetComponent<PlateController>());
         card.GetComponent<RecipeCard>().SetRecipe(recipe);
 
         currentOrderNumber++;

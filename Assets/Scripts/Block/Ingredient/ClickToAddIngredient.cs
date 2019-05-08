@@ -5,7 +5,7 @@ using UnityEngine;
 public class ClickToAddIngredient : MonoBehaviour
 {
 
-    public Ingredient ingredient;
+    protected Ingredient ingredient;
     public SpriteRenderer debugIndicator;
 
     private List<PlateController> targets = new List<PlateController>();
@@ -42,8 +42,6 @@ public class ClickToAddIngredient : MonoBehaviour
         {
             if (hit.collider.gameObject == gameObject)
             {
-                Debug.Log("Clicked!");
-
                 // Add ingredient to all current targets
                 foreach (PlateController plate in targets)
                 {

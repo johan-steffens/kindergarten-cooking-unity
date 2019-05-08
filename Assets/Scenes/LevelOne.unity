@@ -5658,10 +5658,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 516335857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b3c6ea3f3cccc047a7a667ca23bb174, type: 3}
+  m_Script: {fileID: 11500000, guid: 4aa8143640a16bf4899ae2bb28deeffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient: 0
   debugIndicator: {fileID: 1712164460}
 --- !u!1 &519420028
 GameObject:
@@ -5982,15 +5981,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: -12, y: -7, z: 0}
-    second:
-      m_TileIndex: 17
-      m_TileSpriteIndex: 17
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: -2, y: -7, z: 0}
     second:
       m_TileIndex: 15
@@ -6004,15 +5994,6 @@ Tilemap:
     second:
       m_TileIndex: 15
       m_TileSpriteIndex: 15
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 11, y: -7, z: 0}
-    second:
-      m_TileIndex: 17
-      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -6120,7 +6101,7 @@ Tilemap:
   - first: {x: -1, y: -6, z: 0}
     second:
       m_TileIndex: 6
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -6513,15 +6494,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: -12, y: 5, z: 0}
-    second:
-      m_TileIndex: 17
-      m_TileSpriteIndex: 17
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: -2, y: 5, z: 0}
     second:
       m_TileIndex: 14
@@ -6535,15 +6507,6 @@ Tilemap:
     second:
       m_TileIndex: 14
       m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 11, y: 5, z: 0}
-    second:
-      m_TileIndex: 17
-      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -6621,12 +6584,11 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: cfbe3f80f86c451438835fb3fa2ba04e, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: d283a6bd157c70d40a2a056908fcd062, type: 2}
-  - m_RefCount: 4
-    m_Data: {fileID: 11400000, guid: 4889ad9de5397dd46a43be86773d7aaf, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 5003087493860736807, guid: d26ccc114f1fe3049b77bc7da32722c0,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 8721711271301322016, guid: d26ccc114f1fe3049b77bc7da32722c0,
       type: 3}
@@ -6675,11 +6637,11 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 7133224558935377443, guid: d26ccc114f1fe3049b77bc7da32722c0,
       type: 3}
-  - m_RefCount: 4
-    m_Data: {fileID: -2429240966196717515, guid: d26ccc114f1fe3049b77bc7da32722c0,
+  - m_RefCount: 1
+    m_Data: {fileID: 5003087493860736807, guid: d26ccc114f1fe3049b77bc7da32722c0,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 69
+  - m_RefCount: 65
     m_Data:
       e00: 1
       e01: 0
@@ -6698,7 +6660,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 69
+  - m_RefCount: 65
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8027,10 +7989,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1783960543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b3c6ea3f3cccc047a7a667ca23bb174, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ed63756ce7124e4699d7619b0fb358d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient: 0
   debugIndicator: {fileID: 867257461}
 --- !u!1 &2074813232
 GameObject:
@@ -8077,13 +8038,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platePrefab: {fileID: 1850946262773456729, guid: a4f9d638d9ee75543b83a04fa28328ff,
     type: 3}
-  recipes:
-  - name: Mud Pie
-    ingredients: 230000001400000023000000
-  - name: Flowerbed Burger
-    ingredients: 140000002300000014000000
-  - name: Garden Salad
-    ingredients: 1400000023000000
 --- !u!1 &2088155470
 GameObject:
   m_ObjectHideFlags: 0

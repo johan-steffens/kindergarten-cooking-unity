@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlateController : MonoBehaviour
 {
 
-    public List<Ingredient> addedIngredients;
+    public List<Ingredient> addedIngredients = new List<Ingredient>();
 
     public Recipe recipe;
     private RecipeCard card;
@@ -19,11 +19,8 @@ public class PlateController : MonoBehaviour
 
     public void AddIngredient(Ingredient ingredient)
     {
-        if(addedIngredients == null)
-        {
-            addedIngredients = new List<Ingredient>();
-        }
         addedIngredients.Add(ingredient);
+        card.NotifyIngredientsAdded();
     }
 
     public void SetCard(RecipeCard card)
