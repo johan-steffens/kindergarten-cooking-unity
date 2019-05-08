@@ -133,38 +133,41 @@ public class RecipeCard : MonoBehaviour
         int ingredientCount = recipe.ingredients.Count;
         for (int i = 0; i < ingredientCount; i++)
         {
-            if (i == 4)
-                return;
+            if (i == 4 || completed || failed)
+                break;
 
             Ingredient ingredient = recipe.ingredients[i];
             if(i == 0)
             {
                 Image image = ingredientOne.transform.Find("Image").GetComponent<Image>();
                 image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
-                image.color = ingredient.color;
+                Color imageColor = ingredient.color;
 
-                // Check if ingredient 1 matches
-                if(plate.addedIngredients.Count >= 1)
+                // Check if ingredient 2 matches
+                if (plate.addedIngredients.Count >= 1)
                 {
                     // Correct ingredient
-                    if(plate.addedIngredients[0] == ingredient)
+                    if (plate.addedIngredients[0] == ingredient)
                     {
                         ingredientOne.GetComponent<Image>().color = Color.green;
-                        image.color = new Color(0, 0, 0, 0.6f);
+                        imageColor = new Color(0, 0, 0, 0.6f);
                     }
                     // Otherwise order failed
                     else
                     {
+                        ingredientOne.GetComponent<Image>().color = Color.red;
+                        imageColor = new Color(0, 0, 0, 0.6f);
                         SetStateFailed();
-                        return;
                     }
                 }
+
+                image.color = imageColor;
             }
             else if(i == 1)
             {
                 Image image = ingredientTwo.transform.Find("Image").GetComponent<Image>();
                 image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
-                image.color = ingredient.color;
+                Color imageColor = ingredient.color;
 
                 // Check if ingredient 2 matches
                 if (plate.addedIngredients.Count >= 2)
@@ -173,21 +176,24 @@ public class RecipeCard : MonoBehaviour
                     if (plate.addedIngredients[1] == ingredient)
                     {
                         ingredientTwo.GetComponent<Image>().color = Color.green;
-                        image.color = new Color(0, 0, 0, 0.6f);
+                        imageColor = new Color(0, 0, 0, 0.6f);
                     }
                     // Otherwise order failed
                     else
                     {
+                        ingredientTwo.GetComponent<Image>().color = Color.red;
+                        imageColor = new Color(0, 0, 0, 0.6f);
                         SetStateFailed();
-                        return;
                     }
                 }
+
+                image.color = imageColor;
             }
             else if (i == 2)
             {
                 Image image = ingredientThree.transform.Find("Image").GetComponent<Image>();
                 image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
-                image.color = ingredient.color;
+                Color imageColor = ingredient.color;
 
                 // Check if ingredient 2 matches
                 if (plate.addedIngredients.Count >= 3)
@@ -196,21 +202,24 @@ public class RecipeCard : MonoBehaviour
                     if (plate.addedIngredients[2] == ingredient)
                     {
                         ingredientThree.GetComponent<Image>().color = Color.green;
-                        image.color = new Color(0, 0, 0, 0.6f);
+                        imageColor = new Color(0, 0, 0, 0.6f);
                     }
                     // Otherwise order failed
                     else
                     {
+                        ingredientThree.GetComponent<Image>().color = Color.red;
+                        imageColor = new Color(0, 0, 0, 0.6f);
                         SetStateFailed();
-                        return;
                     }
                 }
+
+                image.color = imageColor;
             }
             else if (i == 3)
             {
                 Image image = ingredientFour.transform.Find("Image").GetComponent<Image>();
                 image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
-                image.color = ingredient.color;
+                Color imageColor = ingredient.color;
 
                 // Check if ingredient 2 matches
                 if (plate.addedIngredients.Count >= 4)
@@ -219,21 +228,24 @@ public class RecipeCard : MonoBehaviour
                     if (plate.addedIngredients[3] == ingredient)
                     {
                         ingredientFour.GetComponent<Image>().color = Color.green;
-                        image.color = new Color(0, 0, 0, 0.6f);
+                        imageColor = new Color(0, 0, 0, 0.6f);
                     }
                     // Otherwise order failed
                     else
                     {
+                        ingredientFour.GetComponent<Image>().color = Color.red;
+                        imageColor = new Color(0, 0, 0, 0.6f);
                         SetStateFailed();
-                        return;
                     }
                 }
+
+                image.color = imageColor;
             }
             else if (i == 4)
             {
                 Image image = ingredientFive.transform.Find("Image").GetComponent<Image>();
                 image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
-                image.color = ingredient.color;
+                Color imageColor = ingredient.color;
 
                 // Check if ingredient 2 matches
                 if (plate.addedIngredients.Count >= 5)
@@ -242,15 +254,18 @@ public class RecipeCard : MonoBehaviour
                     if (plate.addedIngredients[4] == ingredient)
                     {
                         ingredientFive.GetComponent<Image>().color = Color.green;
-                        image.color = new Color(0, 0, 0, 0.6f); 
+                        imageColor = new Color(0, 0, 0, 0.6f); 
                     }
                     // Otherwise order failed
                     else
                     {
+                        ingredientFive.GetComponent<Image>().color = Color.red;
+                        imageColor = new Color(0, 0, 0, 0.6f);
                         SetStateFailed();
-                        return;
                     }
                 }
+
+                image.color = imageColor;
             }
         }
 
