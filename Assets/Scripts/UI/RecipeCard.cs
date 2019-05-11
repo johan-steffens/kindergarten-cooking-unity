@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class RecipeCard : MonoBehaviour
+public class RecipeCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
     public Sprite basePanelSprite;
@@ -30,6 +31,7 @@ public class RecipeCard : MonoBehaviour
     private int price = 0;
     private int profit = 0;
 
+    private bool hovering = false;
     private bool completed = false;
     private bool failed = false;
 
@@ -123,6 +125,28 @@ public class RecipeCard : MonoBehaviour
     public void NotifyIngredientsAdded()
     {
         UpdateIngredients();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        hovering = true;
+        SetSprite(hovering);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        hovering = true;
+        SetSprite(false);
+    }
+
+    public void NotifyHover(bool hovering)
+    {
+        SetSprite(hovering);
+    }
+
+    private void SetSprite(bool hovering)
+    {
+        rootImage.sprite = hovering ? hoverPanelSprite : basePanelSprite;
     }
 
     private void UpdateIngredients()
@@ -307,4 +331,5 @@ public class RecipeCard : MonoBehaviour
         }
         return false;
     }
+
 }
