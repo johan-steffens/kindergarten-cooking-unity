@@ -19,13 +19,11 @@ public class ClickedGraphics : MonoBehaviour
     public void OnMouseDown()
     {
         image.sprite = clickedSprite;
-        image.SetNativeSize();
     }
 
     public void OnMouseUp()
     {
         image.sprite = normalSprite;
-        image.SetNativeSize();
     }
 
 }
