@@ -9,29 +9,33 @@ public class ImageColorChanger : MonoBehaviour
     public float speed;
 
     private Image image;
+    private Color originColor;
     private Color targetColor;
-    private float timeLeft;
+    private float timeLeft = 0;
 
     void Start()
     {
         image = GetComponent<Image>();
+        originColor = new Color(Random.Range(25, 100) / 100f, Random.Range(25, 100) / 100f, Random.Range(25, 100) / 100f);
+        targetColor = new Color(Random.Range(25, 100) / 100f, Random.Range(25, 100) / 100f, Random.Range(25, 100) / 100f);
     }
 
     void Update()
     {
-        if (timeLeft <= Time.deltaTime)
+        if (timeLeft <= 0)
         {
             // Finished transition
             image.color = targetColor;
 
             // Start a new transition
-            targetColor = new Color(Random.value, Random.value, Random.value);
+            originColor = targetColor;
+            targetColor = new Color(Random.Range(25, 100) / 100f, Random.Range(25, 100) / 100f, Random.Range(25, 100) / 100f);
             timeLeft = 2 / speed;
         }
         else
         {
             // Calculate interpolated color
-            image.color = Color.Lerp(image.color, targetColor, Time.deltaTime / timeLeft);
+            image.color = Color.Lerp(originColor, targetColor, 2 / speed - timeLeft);
 
             // Update the timer
             timeLeft -= Time.deltaTime;
