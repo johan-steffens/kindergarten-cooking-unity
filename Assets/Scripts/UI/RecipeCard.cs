@@ -139,7 +139,7 @@ public class RecipeCard : MonoBehaviour
             Ingredient ingredient = recipe.ingredients[i];
             if(i == 0)
             {
-                Image image = ingredientOne.transform.Find("Image").GetComponent<Image>();
+                Image image = ingredientOne.transform.Find("Icon One").gameObject.GetComponent<Image>();
                 image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
                 Color imageColor = ingredient.color;
 
@@ -165,7 +165,7 @@ public class RecipeCard : MonoBehaviour
             }
             else if(i == 1)
             {
-                Image image = ingredientTwo.transform.Find("Image").GetComponent<Image>();
+                Image image = ingredientTwo.transform.Find("Icon Two").gameObject.GetComponent<Image>();
                 image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
                 Color imageColor = ingredient.color;
 
@@ -191,7 +191,7 @@ public class RecipeCard : MonoBehaviour
             }
             else if (i == 2)
             {
-                Image image = ingredientThree.transform.Find("Image").GetComponent<Image>();
+                Image image = ingredientThree.transform.Find("Icon Three").gameObject.GetComponent<Image>();
                 image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
                 Color imageColor = ingredient.color;
 
@@ -217,7 +217,7 @@ public class RecipeCard : MonoBehaviour
             }
             else if (i == 3)
             {
-                Image image = ingredientFour.transform.Find("Image").GetComponent<Image>();
+                Image image = ingredientFour.transform.Find("Icon Four").gameObject.GetComponent<Image>();
                 image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
                 Color imageColor = ingredient.color;
 
@@ -243,7 +243,7 @@ public class RecipeCard : MonoBehaviour
             }
             else if (i == 4)
             {
-                Image image = ingredientFive.transform.Find("Image").GetComponent<Image>();
+                Image image = ingredientFive.transform.Find("Icon Five").gameObject.GetComponent<Image>();
                 image.sprite = Resources.Load<Sprite>("Icons/" + ingredient.iconName);
                 Color imageColor = ingredient.color;
 
