@@ -70,7 +70,10 @@ public class ClickToRotate : MonoBehaviour
         PlateMovement plate = collision.gameObject.GetComponent<PlateMovement>();
         if (plate != null && ! plate.IsTargetSet())
         {
-            plate.SetTarget(transform.position, direction);
+            Vector3 plateSize = plate.GetComponent<SpriteRenderer>().bounds.size;
+            Vector3 target = transform.position;
+            target.x += plate.direction == Direction.RIGHT ? plateSize.x / 8f : 0;
+            plate.SetTarget(target, direction);
         }
     }
 

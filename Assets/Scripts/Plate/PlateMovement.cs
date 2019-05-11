@@ -7,10 +7,17 @@ public class PlateMovement : MonoBehaviour
     public float movementSpeed = 1f;
     public Direction direction = Direction.DOWN;
 
+    private SpriteRenderer spriteRenderer;
+
     private Vector3 target = Vector3.negativeInfinity;
     private Direction targetDirection = Direction.DOWN;
     private bool targetSet = false;
-    
+
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     void Update()
     {
         Vector3 movement = Vector3.zero;
