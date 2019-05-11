@@ -33,10 +33,12 @@ public class PlateController : MonoBehaviour
         {
             hovering = true;
             SetSprite(hovering);
+            card.NotifyHover(hovering);
         } else if(hovering && hits.Where(hit => { return hit.collider == hoverCollider; }).Count() == 0)
         {
             hovering = false;
             SetSprite(hovering);
+            card.NotifyHover(hovering);
         }
     }
 

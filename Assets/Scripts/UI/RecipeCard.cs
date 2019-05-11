@@ -131,12 +131,14 @@ public class RecipeCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         hovering = true;
         SetSprite(hovering);
+        plate.NotifyHover(hovering);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         hovering = true;
         SetSprite(false);
+        plate.NotifyHover(false);
     }
 
     public void NotifyHover(bool hovering)
