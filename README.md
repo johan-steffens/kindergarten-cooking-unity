@@ -1,4 +1,4 @@
-# kindergarten-conveyer-cooking-unity
+# Kindergarten Cooking
 
 ##### A uh... cooking game? Made for Weekly Game Jam #95 
 
