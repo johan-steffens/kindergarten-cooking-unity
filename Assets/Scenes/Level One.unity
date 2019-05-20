@@ -6236,7 +6236,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $70
+  m_Text: $0
 --- !u!222 &827370361
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7403,7 +7403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $50
+  m_Text: $0
 --- !u!222 &987322111
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7550,7 +7550,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: a68eb72afd5e0ee479da50d7a19e4832, type: 3}
-    m_FontSize: 26
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -8816,7 +8816,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $120
+  m_Text: $0
 --- !u!222 &2026384807
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8870,6 +8870,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platePrefab: {fileID: 1850946262773456729, guid: a4f9d638d9ee75543b83a04fa28328ff,
     type: 3}
+  salesAmountText: {fileID: 2026384806}
+  expensesAmountText: {fileID: 987322110}
+  profitAmountText: {fileID: 827370360}
 --- !u!1 &2088155470
 GameObject:
   m_ObjectHideFlags: 0

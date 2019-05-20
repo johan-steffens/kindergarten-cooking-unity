@@ -117,6 +117,11 @@ public class RecipeCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         txtOrderNumber.text = "Order #" + orderNumber;
     }
 
+    public int GetOrderNumber()
+    {
+        return orderNumber;
+    }
+
     public void SetPlate(PlateController plate)
     {
         this.plate = plate;
@@ -336,6 +341,15 @@ public class RecipeCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             return true;
         }
         return false;
+    }
+
+    public void NotifyCompleted()
+    {
+        if(failed)
+        {
+            profit = 0;
+        }
+        BaseLevelSceneController.GetInstance().NotifyPlateCompleted(profit);
     }
 
 }

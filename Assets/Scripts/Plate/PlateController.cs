@@ -70,6 +70,7 @@ public class PlateController : MonoBehaviour
 
     private IEnumerator DestroyOrder()
     {
+        card.NotifyCompleted();
         Destroy(card.gameObject);
         yield return new WaitForSeconds(0.1f);
         RecipesContainer.GetInstance().ReorderCards();

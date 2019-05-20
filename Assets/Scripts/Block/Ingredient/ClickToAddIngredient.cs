@@ -46,6 +46,7 @@ public class ClickToAddIngredient : MonoBehaviour
                 foreach (PlateController plate in targets)
                 {
                     plate.AddIngredient(ingredient);
+                    BaseLevelSceneController.GetInstance().NotifyExpenseAdded(ingredient);
                 }
             }
         } 
