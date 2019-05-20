@@ -55,7 +55,7 @@ public class PlateController : MonoBehaviour
     public void AddIngredient(Ingredient ingredient)
     {
         addedIngredients.Add(ingredient);
-        card.NotifyIngredientsAdded(ingredient);
+        card.NotifyIngredientsAdded();
     }
 
     public void SetCard(RecipeCard card)
