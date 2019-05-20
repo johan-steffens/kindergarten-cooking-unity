@@ -175,19 +175,20 @@ public class RecipeCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
                     // Correct ingredient
                     if (plate.addedIngredients[0] == ingredient)
                     {
-                        ingredientOne.GetComponent<Image>().color = Color.green;
-                        imageColor = new Color(0, 0, 0, 0.6f);
+                        ingredientOne.GetComponent<Image>().CrossFadeColor(Color.green, 0.4f, false, true);
+                        imageColor = new Color(0, 0, 0, 0.7f);
                     }
                     // Otherwise order failed
                     else
                     {
-                        ingredientOne.GetComponent<Image>().color = Color.red;
-                        imageColor = new Color(0, 0, 0, 0.6f);
+                        ingredientOne.GetComponent<Image>().CrossFadeColor(Color.red, 0.4f, false, true);
+                        imageColor = new Color(0, 0, 0, 0.7f);
                         SetStateFailed();
                     }
                 }
 
                 image.color = imageColor;
+                image.CrossFadeColor(imageColor, 0.4f, false, true);
             }
             else if(i == 1)
             {
@@ -201,19 +202,20 @@ public class RecipeCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
                     // Correct ingredient
                     if (plate.addedIngredients[1] == ingredient)
                     {
-                        ingredientTwo.GetComponent<Image>().color = Color.green;
-                        imageColor = new Color(0, 0, 0, 0.6f);
+                        ingredientTwo.GetComponent<Image>().CrossFadeColor(Color.green, 0.4f, false, true);
+                        imageColor = new Color(0, 0, 0, 0.7f);
                     }
                     // Otherwise order failed
                     else
                     {
-                        ingredientTwo.GetComponent<Image>().color = Color.red;
-                        imageColor = new Color(0, 0, 0, 0.6f);
+                        ingredientTwo.GetComponent<Image>().CrossFadeColor(Color.red, 0.4f, false, true);
+                        imageColor = new Color(0, 0, 0, 0.7f);
                         SetStateFailed();
                     }
                 }
 
                 image.color = imageColor;
+                image.CrossFadeColor(imageColor, 0.4f, false, true);
             }
             else if (i == 2)
             {
@@ -227,19 +229,20 @@ public class RecipeCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
                     // Correct ingredient
                     if (plate.addedIngredients[2] == ingredient)
                     {
-                        ingredientThree.GetComponent<Image>().color = Color.green;
-                        imageColor = new Color(0, 0, 0, 0.6f);
+                        ingredientThree.GetComponent<Image>().CrossFadeColor(Color.green, 0.4f, false, true);
+                        imageColor = new Color(0, 0, 0, 0.7f);
                     }
                     // Otherwise order failed
                     else
                     {
-                        ingredientThree.GetComponent<Image>().color = Color.red;
-                        imageColor = new Color(0, 0, 0, 0.6f);
+                        ingredientThree.GetComponent<Image>().CrossFadeColor(Color.red, 0.4f, false, true);
+                        imageColor = new Color(0, 0, 0, 0.7f);
                         SetStateFailed();
                     }
                 }
 
                 image.color = imageColor;
+                image.CrossFadeColor(imageColor, 0.4f, false, true);
             }
             else if (i == 3)
             {
@@ -253,19 +256,20 @@ public class RecipeCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
                     // Correct ingredient
                     if (plate.addedIngredients[3] == ingredient)
                     {
-                        ingredientFour.GetComponent<Image>().color = Color.green;
-                        imageColor = new Color(0, 0, 0, 0.6f);
+                        ingredientFour.GetComponent<Image>().CrossFadeColor(Color.green, 0.4f, false, true);
+                        imageColor = new Color(0, 0, 0, 0.7f);
                     }
                     // Otherwise order failed
                     else
                     {
-                        ingredientFour.GetComponent<Image>().color = Color.red;
-                        imageColor = new Color(0, 0, 0, 0.6f);
+                        ingredientFour.GetComponent<Image>().CrossFadeColor(Color.red, 0.4f, false, true);
+                        imageColor = new Color(0, 0, 0, 0.7f);
                         SetStateFailed();
                     }
                 }
 
                 image.color = imageColor;
+                image.CrossFadeColor(imageColor, 0.4f, false, true);
             }
             else if (i == 4)
             {
@@ -279,19 +283,19 @@ public class RecipeCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
                     // Correct ingredient
                     if (plate.addedIngredients[4] == ingredient)
                     {
-                        ingredientFive.GetComponent<Image>().color = Color.green;
-                        imageColor = new Color(0, 0, 0, 0.6f); 
+                        ingredientFive.GetComponent<Image>().CrossFadeColor(Color.green, 0.4f, false, true);
+                        imageColor = new Color(0, 0, 0, 0.7f); 
                     }
                     // Otherwise order failed
                     else
                     {
-                        ingredientFive.GetComponent<Image>().color = Color.red;
-                        imageColor = new Color(0, 0, 0, 0.6f);
+                        ingredientFive.GetComponent<Image>().CrossFadeColor(Color.red, 0.4f, false, true);
+                        imageColor = new Color(0, 0, 0, 0.7f);
                         SetStateFailed();
                     }
                 }
 
-                image.color = imageColor;
+                image.CrossFadeColor(imageColor, 0.4f, false, true);
             }
         }
 
