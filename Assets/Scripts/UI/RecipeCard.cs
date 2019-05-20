@@ -30,6 +30,7 @@ public class RecipeCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     private Recipe recipe;
     private int price = 0;
     private int profit = 0;
+    private int addedIngredients = 0;
 
     private bool hovering = false;
     private bool completed = false;
@@ -127,9 +128,10 @@ public class RecipeCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         this.plate = plate;
     }
 
-    public void NotifyIngredientsAdded()
+    public void NotifyIngredientsAdded(Ingredient ingredient)
     {
         UpdateIngredients();
+        addedIngredients += ingredient.value;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -345,11 +347,11 @@ public class RecipeCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void NotifyCompleted()
     {
-        if(failed)
+        if(failed || (! failed && ! completed))
         {
-            profit = 0;
+            addedIngredients = 0;
         }
-        BaseLevelSceneController.GetInstance().NotifyPlateCompleted(profit);
+        BaseLevelSceneController.GetInstance().NotifyPlateCompleted(addedIngredients);
     }
 
 }
