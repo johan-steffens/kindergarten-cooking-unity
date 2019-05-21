@@ -11,6 +11,8 @@ public class BaseLevelSceneController : MonoBehaviour
     public Text expensesAmountText;
     public Text profitAmountText;
 
+    public List<Vector2> spawnPositions;
+
     private int salesAmount = 0;
     private int expensesAmount = 0;
     private int profitAmount = 0;
@@ -49,6 +51,7 @@ public class BaseLevelSceneController : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         // Configure plate
+        plate.transform.position = spawnPositions[Random.Range(0, spawnPositions.Count)];
         plate.GetComponent<PlateController>().SetCard(card.GetComponent<RecipeCard>());
         plate.GetComponent<PlateController>().SetRecipe(recipe);
 

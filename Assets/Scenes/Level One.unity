@@ -8873,6 +8873,8 @@ MonoBehaviour:
   salesAmountText: {fileID: 2026384806}
   expensesAmountText: {fileID: 987322110}
   profitAmountText: {fileID: 827370360}
+  spawnPositions:
+  - {x: 0, y: 9}
 --- !u!1 &2088155470
 GameObject:
   m_ObjectHideFlags: 0
