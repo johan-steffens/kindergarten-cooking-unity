@@ -77,6 +77,11 @@ public class PlateMovement : MonoBehaviour
         this.targetSet = true;        
     }
 
+    public void SetSpeed(float speed)
+    {
+        movementSpeed = speed;
+    }
+
     public bool IsTargetSet()
     {
         return targetSet;

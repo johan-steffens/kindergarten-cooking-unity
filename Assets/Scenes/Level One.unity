@@ -8875,6 +8875,8 @@ MonoBehaviour:
   profitAmountText: {fileID: 827370360}
   spawnPositions:
   - {x: 0, y: 9}
+  maxOrders: 3
+  orderSpawnFrequency: 10
 --- !u!1 &2088155470
 GameObject:
   m_ObjectHideFlags: 0
